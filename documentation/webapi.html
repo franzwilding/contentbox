@@ -1,23 +1,161 @@
 <html>
 	<head>
+		
+		<link href="http://franz-wilding.at/global/styles/documentation.css" rel="stylesheet" type="text/css" media="screen" />
+		
 		<title>contentBox web-API protocol
 	</head>
 	
 	<body>
 		<h1>contentBox web-API protocol</h1>
 		
+		<h2>login</h2>
+	
+		<h3>description</h3>
+		<p>
+			Login, and get a cookie for future connections
+		</p>
+	
+		<h3>parameters</h3>
+		<ol>
+			<li><strong>email</strong> (user's email-address)</li>
+			<li><strong>password</strong> (user's password)</li>
+		</ol>
+	
+		<h3>response</h3>
+		<p>
+			STATUS = "ok" or STATUS = "noauth" or STATUS = "inactive" or STATUS = "error"
+		</p>
+			
+			
+			
+			
 		<h2>getmyareas</h2>
+		
+		<h3>description</h3>
+		<p>
+			get all areas, authoriced for this user
+		</p>
+	
+		<h3>parameters</h3>
+		<ol><li>none</li></ol>
+		
+		<h3>response</h3>
+		<p>
+			array of all areas with name and id
+		</p>
+		
+		
+		
+		
+		
 		
 		<h2>inviteuser</h2>
 		
+		<h3>description</h3>
+		<p>
+			call the inviteuser function on the server, to invite an new user. The server will send an email to this new user.
+		</p>
+	
+		<h3>parameters</h3>
+		<ol>
+			<li><strong>email</strong> (The Email-Adress of the new User)</li>
+			<li><strong>message</strong> (The message will be send to the new user)</li>
+		</ol>
+	
+		<h3>response</h3>
+		<p>
+			STATUS = "ok" or STATUS = "error" or STATUS = "allreadyexists"
+		</p>
+		
+		
+		
+		
+		
 		<h2>getusers</h2>
+		
+		<h3>description</h3>
+		<p>
+			get the list of all users
+		</p>
+	
+		<h3>parameters</h3>
+		<ol><li>none</li></ol>
+	
+		<h3>response</h3>
+		<p>
+			STATUS = "ok" or STATUS = "error"
+			USERDATA (firstname, lastname, isadmin)
+		</p>
+		
+		
+		
 		
 		<h2>updatemyprofile</h2>
 		
+		<h3>description</h3>
+		<p>
+			get the list of all users
+		</p>
+	
+		<h3>parameters</h3>
+		<ol><li>none</li></ol>
+	
+		<h3>response</h3>
+		<p>
+			STATUS = "ok" or STATUS = "error"<br />
+			USERDATA (firstname, lastname, isadmin)
+		</p>
+		
+		
 		<h2>getdataforarea</h2>
 		
-		<h2>updatedataforarea</h2>
+		<h3>description</h3>
+		<p>
+			get all data-rows for an area and an table, maximal 50 rows will be returned
+		</p>
+	
+		<h3>parameters</h3>
+		<ol>
+			<li><strong>area</strong> (id of the area)</li>
+			<li><strong>tables</strong> (data for specific tables, if this parameter = NULL, all tables are returned)</li>
+			<li><strong>start</strong> (start row-counter, of not decleared start=1)</li>
+		</ol>
+	
+		<h3>response</h3>
+		<p>
+			STATUS = "ok" or STATUS = "error"<br />
+			DATAARRAY with the DATA<br />
+			THEREISMORE-FLag
+		</p>
 		
+		
+		
+		
+		
+		
+		
+		
+		<h2>updatedataforarea</h2>
+	
+		<h3>description</h3>
+		<p>
+			Send a updated or new data-row to the server. 
+		</p>
+		
+		<h3>parameters</h3>
+		<ol>
+			<li><strong>area</strong> (id of the area)</li>
+			<li><strong>table</strong> (name of the table/function in the area)</li>
+			<li><strong>data</strong> (the datarow, or dataarray. When the id-field is set, the row will be updated, if the id-field is not set, a new row will be created)</li>
+			<li><strong>force</strong> (if there is a collision, the remote-data will be replaced with the new one)
+		</ol>
+		
+		<h3>response</h3>
+		<p>
+			STATUS = "ok" or STATUS = "error" or STATUS = "collision" <br />
+			COLLISIONDATA = Datarow, and creator-username
+		</p>	
 	</body>
 	
 </html>
