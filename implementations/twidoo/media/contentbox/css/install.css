@@ -1,0 +1,80 @@
+
+#publicView .mainView {
+		background-position: left top;
+	}
+
+#publicView.install h1 {
+	margin:0 30px 60px 30px;
+	background: url(img/logo_big.png) no-repeat left top;
+	padding-left:150px;
+	padding-top: 85px;
+	height: 62px;
+	}
+
+#publicView.install h1 span {
+	width: 266px;
+	height: 38px;
+	display: block;
+	margin:0 0 20px 0;
+	padding:0;
+	text-indent: -99999px;
+	background: url(img/contentBox.gif) no-repeat left top;
+	}
+
+#publicView.install div.box {
+	width: 95%;
+	}
+
+#publicView.install div.box ol {
+	list-style: none;
+	font-size: 12px;
+	}
+
+#publicView.install div.box ol li {
+	margin:3px 5px 3px 25px;
+	color: #333;
+	text-shadow: 1px 1px white;
+	}
+
+#publicView.install div.box ol li.success {
+	background: #e1ffb2;
+	padding:4px 7px;
+	list-style-image: url(img/success.gif);
+	list-style-position: left top;
+	}
+
+#publicView.install div.box ol li.error {
+	background: #ffd1c4;
+	padding:4px 7px;
+	list-style-image: url(img/error.gif);
+	list-style-position: left top;
+	}
+
+#publicView.install div.box ol + p {
+	text-align: center;
+	margin:20px 0 5px 0;
+	}
+
+#publicView.install div.box ol + p.success { color: #54c421; }
+#publicView.install div.box ol + p.error { color: #77120e; }
+
+#publicView.install form ul li {
+	width: 100%;
+	}
+
+#publicView.install form ul li label {
+	width: 200px;
+	}
+
+#publicView.install form ul li label.error {
+	color: red;
+	}
+
+#publicView.install form ul li input {
+	width: 230px;
+	}
+
+#publicView.install form button {
+	width: 300px;
+	margin-top: 15px;
+	}

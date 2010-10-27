@@ -1,0 +1,34 @@
+/* REMOVE PADDING AND MARGIN VALUES */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, dl, li, dd, dt, img,
+blockquote, q, table, thead, tbody, tfoot, caption, th, tr, td, a, form,
+input, textarea, fieldset, pre
+{margin: 0; padding: 0;}
+
+/* SORT OUT HEADER FORMATTING AND SIZES */
+h1, h2, h3, h4, h5 {font-weight: normal;}
+h1, h2, h3, h4, h5, h6 {font-size: 2em;}
+
+/* HARMONIZE LINKS, KILL BORDER ON IMG LINKS */
+a {text-decoration: underline;}
+a:link, a:visited {color: #00f;}
+a:hover {color: #33f;}
+a:active {color: #fff;}
+a img, :link img, :visited img {border: none}
+
+/* REMOVE BROWSERS DEFAULT TABLE BORDERS */
+table {border-collapse: collapse;}
+
+fieldset {
+	border:none;
+	}
+
+/* REMOVE AUTOMATIC TOP/BOTTOM MARGINS ON NESTED LISTS */
+ul ul, ul ol, ul dir, ul menu, ul dl,
+ol ul, ol ol, ol dir, ol menu, ol dl,
+dir ul, dir ol, dir dir, dir menu, dir dl,
+menu ul, menu ol, menu dir, menu menu, menu dl,
+dl ul, dl ol, dl dir, dl menu, dl dl
+{margin-top: 0; margin-bottom: 0;}
+
+/* HARMONISE LIST-BULLET TYPE */
+ul, ol, dl {list-style-type: disc;}

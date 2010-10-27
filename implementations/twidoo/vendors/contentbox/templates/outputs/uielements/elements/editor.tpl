@@ -1,0 +1,1 @@
+<textarea class="wymeditor" name="{$name}" id="{$id}">{$value}</textarea>
